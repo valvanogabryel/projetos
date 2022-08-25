@@ -102,12 +102,12 @@ a:hover {
         height: 2px;
         background: currentColor;
         margin-top: 5px;
-        transition: 0.3s;
+        transition: 0.3s ease;
     }
 
     #nav.active #hamburguer {
         border-top-color: transparent;
-        transition: 0.1s;
+        transition: 0.1s ease;
     }
 
     #nav.active #hamburguer::before {
