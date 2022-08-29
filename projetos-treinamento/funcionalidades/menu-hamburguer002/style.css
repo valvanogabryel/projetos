@@ -35,7 +35,7 @@ a:hover {
 #menu {
     display: flex;
     list-style: none;
-    gap: 0.5rem;
+    margin-left: 0.5rem;
 }
 
 #menu a {
