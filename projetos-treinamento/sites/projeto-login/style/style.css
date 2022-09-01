@@ -26,11 +26,9 @@ html {
 
 #login {
     background: white;
-    margin: auto;
+    margin: 25% auto;
     width: 75%;
-    height: 660px;
-    position: relative;
-    top: 120px;
+    height: 650px;
     border-radius: 15px;
 }
 
