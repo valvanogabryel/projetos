@@ -6,3 +6,147 @@
     /* Branco 
        Preto */
 }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: var(--cor2) fixed;
+    height: 100vh;
+    overflow: hidden;
+}
+
+html {
+    overflow: hidden;
+}
+
+#login {
+    background: white;
+    margin: auto;
+    width: 75%;
+    height: 660px;
+    position: relative;
+    top: 120px;
+    border-radius: 15px;
+}
+
+#img {
+    background: url(..//img/metal.jpg) bottom center fixed;
+    background-size: cover;
+    height: 250px;
+    border-radius: 15px 15px 0 0;
+}
+
+
+h1 {
+    text-align: center;
+    margin: 5px 0 -10px 0;
+    font-size: 1.8rem;
+}
+
+p {
+    text-align: justify;
+    margin: 25px 0 20px 0
+}
+
+#form {
+    padding: 15px;
+}
+
+span {
+    color: white;
+    background-color: var(--cor2);
+    width: 101%;
+    border-radius: 10px;
+    display: inline;
+    height: 50px;
+    position: relative;
+    padding: 5px 3px 5px 1px;
+    margin: -30px 0px;
+}
+
+input {
+    height: 42px;
+    display: block;
+    width: 86%;
+    border-radius: 10px;
+    float: right;
+    position: relative;
+    bottom: 41px;
+    padding: 0px 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: #92CFCB;
+    color: rgba(70, 70, 70, 0.87);
+}
+
+.btn-consent {
+    width: 100%;
+    margin: 5px 0;
+    border-radius: 10px;
+    font: 12pt arial;
+    font-weight: 100;
+    padding: 20px 0 35px 0px;
+}
+
+#submit {
+    background-color: var(--cor1);
+    color: white;
+    margin: 20px 0 0 0;
+}
+
+#submit:hover {
+    background-color: #3d8784;
+    color: rgba(171, 171, 171, 0.679);
+}
+
+#forgot {
+    background: white;
+    color: var(--cor1);
+    display: inline;
+    transition: 0.1s;
+}
+
+#forgot:hover {
+    background: #66CEC6;
+    color: #276566;
+}
+
+#mail {
+    display: inline;
+    background: none;
+    color: var(--cor1);
+    position: relative;
+    float: right;
+    left: 226px;
+    bottom: 58px;
+}
+
+#mail:hover {
+    color: #276566;
+}
+
+#mail-link {
+    text-decoration: none;
+    color: var(--cor1);
+}
+
+
+#relative1 {
+    position: relative;
+    top: 15px;
+}
+
+#relative2 {
+    position: relative;
+    top: 10px;
+}
+
+@media screen and (orientation: landscape) {
+    body {
+        background-color: black;
+    }
+}

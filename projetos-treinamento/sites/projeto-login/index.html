@@ -14,19 +14,26 @@
     <main>
         <section id="login">
             <div id="img">
-                foto
+
             </div>
             <div id="form">
                 <h1>Login</h1>
                 <p>Seja bem-vindo(a) novamente! Faça login para acessar sua conta e poder fazer as configurações no seu
                     ambiente.</p>
                 <form action="login.php" method="post">
-                    <span class="material-icons md-36">user</span>
-                    <input type="email" name="email" id="iemail" placeholder="Insira seu melhor Email">
-                    <span class="material-icons md-18">vpn_key</span>
-                    <input type="password" name="senha" id="isenha" placeholder="Insira sua melhor Senha">
-                    <input type="button" value="Entrar">
-                    <input type="button" value="Esqueci minha senha"><span class="material-icons md-18">mail</span>
+                    <div id="relative1">
+                        <span class="material-icons" style="font-size: 36px;">person</span>
+                        <input type="email" name="email" id="iemail" placeholder="Insira seu melhor Email" required>
+                    </div>
+                    <div id="relative2">
+                        <span class="material-icons" style="font-size: 36px;">vpn_key</span>
+                        <input type="password" name="senha" id="isenha" placeholder="Insira sua melhor Senha" required
+                            minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+                    </div>
+                    <input type="button" value="Entrar" class="btn-consent" id="submit">
+                    <input type="button" value="Esqueci minha senha" class="btn-consent" id="forgot"><span
+                        class="material-icons" style="font-size: 18px;" id="mail"><a id="mail-link"
+                            href="#">mail</a></span>
                 </form>
             </div>
         </section>
