@@ -25,18 +25,26 @@ html {
 }
 
 #login {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background: white;
-    margin: 25% auto;
     width: 75%;
     height: 650px;
-    border-radius: 15px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.450);
+    transition: 0.3s;
 }
 
 #img {
-    background: url(..//img/metal.jpg) bottom center fixed;
+    background: url(..//img/metal.jpg) center center fixed;
     background-size: cover;
     height: 250px;
     border-radius: 15px 15px 0 0;
+    display: block;
+    transition: 0.3s;
 }
 
 
@@ -53,6 +61,7 @@ p {
 
 #form {
     padding: 15px;
+    display: block;
 }
 
 span {
@@ -91,7 +100,7 @@ input {
 }
 
 #submit {
-    background-color: var(--cor1);
+    background-color: #4FAAA4;
     color: white;
     margin: 20px 0 0 0;
 }
@@ -117,10 +126,9 @@ input {
     display: inline;
     background: none;
     color: var(--cor1);
-    position: relative;
-    float: right;
-    left: 226px;
-    bottom: 58px;
+    position: absolute;
+    left: 76%;
+    top: 96.5%;
 }
 
 #mail:hover {
@@ -144,13 +152,125 @@ input {
 }
 
 @media screen and (orientation: landscape) {
-    body {
-        background-color: black;
+    #login {
+        display: inline-flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        align-content: space-between;
+        width: 90%;
+        height: 369px;
     }
+
+    #img {
+        width: 400px;
+        border-radius: 20px 0 0 20px;
+        height: 420px;
+    }
+
+    input {
+        width: 85%;
+    }
+
+
+    #form {
+        margin: 20px 0 0 0;
+        padding: 20px;
+    }
+
+    span {
+        padding: 5px 3px 5px 14px;
+    }
+
 }
 
 @media screen and (min-width: 768px) {
     body {
-        background-color: blue;
+        background: linear-gradient(to top, var(--cor1), var(--cor2));
     }
+
+    h1 {
+        padding: 15px 0 0 0;
+    }
+
+
+    #login {
+        display: inline-flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        align-content: space-between;
+        width: 90%;
+        height: 345px;
+    }
+
+    #img {
+        width: 400px;
+        border-radius: 20px 0 0 20px;
+        height: 420px;
+    }
+
+    input {
+        width: 88%;
+    }
+
+
+    #form {
+        margin: 20px 0 0 0;
+        padding: 20px;
+    }
+
+    span {
+        padding: 5px 3px 5px 14px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+
+    h1 {
+        padding: 0;
+        margin: 0;
+    }
+
+    #login {
+        display: inline-flex;
+        flex-direction: row-reverse;
+        align-content: space-around;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        height: 420px;
+    }
+
+    #img {
+        border-radius: 0 20px 20px 0;
+        width: 65%;
+    }
+
+    input {
+        width: 89%;
+    }
+
+
+}
+
+@media screen and (min-width: 1200px) {
+    #login {
+        display: inline-flex;
+        flex-direction: row-reverse;
+        align-content: space-around;
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
+        height: 500px;
+    }
+
+    #img {
+        border-radius: 0 20px 20px 0;
+        width: 50%;
+        height: 500px;
+    }
+
 }
