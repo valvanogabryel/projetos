@@ -15,7 +15,7 @@
 
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background: var(--cor2) fixed;
+    /* background: var(--cor2) fixed; */
     height: 100vh;
     overflow: hidden;
 }
@@ -153,6 +153,20 @@ input {
     top: 10px;
 }
 
+footer #me {
+    position: absolute;
+    bottom: 0vh;
+    left: 50%;
+    transform: translate(-50%);
+    display: block;
+    font-size: 0.6rem;
+    font-style: italic;
+    text-align: center;
+    margin: auto;
+    color: whitesmoke;
+}
+
+
 @media screen and (orientation: landscape) {
     #login {
         display: inline-flex;
@@ -189,7 +203,7 @@ input {
 
 @media screen and (min-width: 768px) {
     body {
-        background: linear-gradient(to top, var(--cor1), var(--cor2));
+        background: linear-gradient(45deg, var(--cor1), var(--cor2));
     }
 
     h1 {
@@ -265,10 +279,13 @@ input {
 
 @media screen and (min-width: 1200px) {
 
-
-    main {
-        animation: bounce 1s infinite;
+    /* grandes telas */
+    .gradient {
+        background: linear-gradient(to top, var(--cor1), var(--cor2));
+        background-size: 400%;
+        animation: gradient 5s infinite;
     }
+
 
     h1 {
         margin: 0;
@@ -307,5 +324,19 @@ input {
 
     span {
         width: 100%;
+    }
+
+
+}
+
+@keyframes gradient {
+
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
     }
 }
