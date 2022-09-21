@@ -15,7 +15,7 @@
 
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    /* background: var(--cor2) fixed; */
+    background: var(--cor2) fixed;
     height: 100vh;
     overflow: hidden;
 }
@@ -204,6 +204,7 @@ footer #me {
 @media screen and (min-width: 768px) {
     body {
         background: linear-gradient(45deg, var(--cor1), var(--cor2));
+        animation: gradient 5s infinite;
     }
 
     h1 {
