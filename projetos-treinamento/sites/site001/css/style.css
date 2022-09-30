@@ -1,9 +1,260 @@
 @charset "UTF-8";
 
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+body {
+    font-family: 'Nabla', cursive;
+    /* min-height: 854px; */
+    background-image: url('https://pokemonrevolution.net/forum/uploads/monthly_2021_03/DVMT-6OXcAE2rZY.jpg.afab972f972bd7fbd4253bc7aa1cf27f.jpg');
+    background-color: #000000;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding-bottom: 20vh;
+    overflow: hidden;
+    height: 100vh;
+    animation: slidein 1s;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+.page-title {
+    color: #ffffff;
+    margin: 25px 0;
+    font-size: 3rem;
+}
+
+button {
+    padding: .8rem 1.5rem;
+    margin: 1rem 0;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: 'Press Start 2P', cursive;
+}
+
+
+button:hover {
+    opacity: 0.8;
+}
+
+h2 {
+    color: white;
+    margin: auto;
+
+}
+
+
+#atributosOponente {
+    font-family: 'Nabla', cursive;
+    text-align: center;
+    margin: 140px 0 0 0;
+    position: relative;
+}
+
+img {
+    animation: scale 3s infinite;
+
+}
+
+#btnSortear {
+    margin: auto;
+}
+
+#btnResetar {
+    position: relative;
+    top: 140px;
+    left: 35px;
+}
+
+#carta-jogador {
+    width: 360px;
+    height: 500px;
+    overflow: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-end;
+}
+
+.opcoes {
+    color: white;
+    font-size: 2em;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+
+#resultado {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5rem;
+    padding: 0 0 30px 0;
+}
+
+#reiniciar {
+    display: none;
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#teste {
+    height: 25px;
+    width: 25px;
+    background-color: white;
+    transition: 0.3s;
+    animation: teste 2s infinite;
+}
+
+#pokemonSorteado {
+    display: none;
+    float: left;
+    font-size: 2rem;
+    width: 0%;
+    position: relative;
+    bottom: 45vh;
+}
+
+#pokemonBotSorteado {
+    display: none;
+    float: right;
+    font-size: 2rem;
+    width: 0%;
+    margin-right: 150px;
+    position: relative;
+    bottom: 40vh;
+}
+
+#pokemonIcon {
+    background: url(https://cdn1.iconfinder.com/data/icons/pokemon-set/24/Charizard-512.png);
+    height: 250px;
+    width: 250px;
+}
+
+#numTentativas {
+    font-family: 'Press Start 2P', cursive;
+    color: #ffffff;
+    text-align: center;
+    position: relative;
+    display: inline;
+    left: 50%;
+    top: 115px;
+    transform: translate(-50%);
+    font-size: 2em;
+}
+
+em {
+    font-family: 'Nabla', cursive;
+    font-size: 2em;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.631);
+}
+
+a {
+    text-decoration: none;
+    color: rgb(201, 152, 53);
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(1)
+    }
+
+
+    50% {
+        transform: scale(0.8)
+    }
+
+
+    100% {
+        transform: scale(1)
+    }
+
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+        color: white;
+    }
+
+    25% {
+        opacity: 1;
+        color: black;
+    }
+
+    50% {
+        opacity: 0;
+        color: black;
+    }
+
+    100% {
+        opacity: 1;
+        color: white;
+    }
+}
+
+@keyframes slidein {
+    from {
+        margin-left: 70%;
+        opacity: 0;
+    }
+
+    to {
+        margin-left: 0%;
+        opacity: 1;
+    }
+
+
+
+}
+
+footer {
+    font-family: 'Press Start 2P', cursive;
+    color: whitesmoke;
+    text-align: center;
+    font-size: 0.5rem;
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%);
+    margin: 5px;
+    animation: blink 0.5s infinite;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    body {
+        min-height: 854px;
+        overflow: visible;
+    }
+
+    .container {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .page-logo {
+        overflow: hidden;
+    }
 }

@@ -5,44 +5,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Pokemão</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nabla&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
-    <header>
-        <img src="logo.png" alt="Logo" class="logo">
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Contatos</a></li>
-                <li><a href="#">Sobre</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main class="container">
-        <section>
-            <div>
-                <h1 id="page-title">Lorem, ipsum.</h1>
-                <p class="paragraph">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi id ducimus
-                    similique expedita. Eos
-                    numquam, repudiandae dignissimos amet excepturi, dolore dolor non sint ex deserunt quas repellat
-                    nulla nisi distinctio.</p>
-            </div>
-            <div id="signup">
-                <form action="cadastro.php" method="get">
-                    <label for="iemail">Email:</label>
-                    <input type="email" name="email" id="iemail" placeholder="Email">
-                    <label for="isenha">Senha:</label>
-                    <input type="password" name="senha" id="isenha" placeholder="Senha">
-                    <input type="button" value="Cadastrar">
-                </form>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <p>dev<a href="portfolio.html">Gabryel Valvano</a></p>
-    </footer>
+<body onload="musica()">
+    <div class="container" id="apagar">
+        <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-super-trunfo.png" class="page-logo"
+            alt="">
+        <h1 class="page-title">Super Trunfo Pokemon</h1>
+        <h2 style="margin-bottom: 10px;">Ganhe 10 rodadas</h2>
+        <div id="contain">
+            <button onclick="sortearCarta()" id="btnSortear">Sortear carta</button>
+            <form id="form">
+                <h2 id="align"></h2>
+                <div class="opcoes" id="opcoes"></div>
+                <button type="button" id="btnJogar" onclick="jogar()" disabled="true">Jogar</button>
+            </form>
+        </div>
+        <span id="pokemonSorteado"></span>
+        <span id="pokemonBotSorteado"></span>
+    </div>
+    <div id="resultado"></div>
+    <div id="reiniciar">
+        <button type="reset" id="btnResetar" onclick="resetar()">Jogar Novamente</button>
+        <h2 id="atributosOponente">placeholder</h2>
+        <span id="numTentativas"></span>
+    </div>
+    <audio src="mp3/audio-pokemon.mp3" id="audio" autoplay></audio>
+
+
+
+    <footer>Developed by <a href="#"><em>Gabryel Valvano</em></a></footer>
     <script src="script/script.js"></script>
 </body>
 
