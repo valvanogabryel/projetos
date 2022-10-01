@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Login</title>
+    <!-- Scripts para ícones (FontAwesome) -->
+    <script src="https://kit.fontawesome.com/4e2c1fe06f.js" crossorigin="anonymous"></script>
+    <!-- Link para Fonte -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;1,300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <main class="login-container">
+        <h1 class="page-title">Login</h1>
+        <form action="login.php" method="post">
+            <label for="iemail">E-mail</label>
+            <input type="email" name="email" id="iemail" placeholder="Digite seu email aqui" autocomplete="off">
+            <label for="isenha">Senha</label>
+            <input type="password" name="Senha" id="isenha" placeholder="Digite sua senha aqui" autocomplete="off"
+                min="8" minlength="8">
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" id="forgot" target="_blank">Esqueci minha senha</a>
+            <input type="submit" value="LOGIN">
+        </form>
+        <section id="social-medias">
+            <p>Ou entre pelas suas redes sociais:</p>
+            <!-- Tag para o uso do FontAwesome (i) -->
+            <a href="https://pt-br.facebook.com" target="_blank"><i class="fa fa-facebook-f" id="facebook"></i></a>
+            <a href="https://www.linkedin.com/in/gabryel-valvano-94338a204/" target="_blank"><i class="fa fa-linkedin"
+                    id="linkedin"></i></a>
+        </section>
+        <section id="register-content">
+            <p>Ainda não tem uma conta?</p>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" id="register" target="_blank">Registrar</a>
+        </section>
+    </main>
+
+
+
+
+
+</body>
+
+</html>
