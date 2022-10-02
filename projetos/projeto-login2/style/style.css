@@ -127,8 +127,12 @@ p {
     margin: 20px auto;
 }
 
-i {
-    color: white;
+#eye-svg {
+    cursor: pointer;
+    float: right;
+    position: relative;
+    bottom: 50px;
+
 }
 
 #facebook {
@@ -141,6 +145,7 @@ i {
     font-size: 1rem;
     margin: 0 10px 0 0px;
     transition: .3s;
+    color: white;
 }
 
 #facebook:hover {
@@ -161,6 +166,7 @@ i {
     font-size: 1rem;
     margin: 0 0 0 10px;
     transition: .3s;
+    color: white;
 }
 
 #linkedin:hover {
