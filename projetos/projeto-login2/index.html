@@ -32,7 +32,7 @@
             <label for="isenha">Senha</label>
             <input type="password" name="Senha" id="isenha" placeholder="Digite sua senha aqui" autocomplete="off"
                 min="8" minlength="8" required>
-            <img src="teste/eye-open.svg" alt="eye" id="eye-svg" width="20px" onclick="">
+            <img src="eyes/eye-open.svg" alt="eye" id="eye-svg" width="20px" onclick="eyeClick()">
             <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" id="forgot" target="_blank">Esqueci minha senha</a>
             <input type="submit" value="LOGIN">
         </form>
@@ -53,7 +53,31 @@
 
 
     <script>
+        const pass = document.getElementById('isenha')
+        const eye = document.getElementById('eye-svg')
+        // Mostrar e esconder senha 
 
+
+        function eyeClick() {
+            let inputTypeIsPass = pass.type == 'password'
+
+            if (inputTypeIsPass) {
+                showPass()
+            } else {
+                hidePass()
+            }
+        }
+
+        function showPass() {
+            pass.setAttribute('type', 'text')
+            eye.setAttribute('src', 'eyes/eye-closed.svg')
+        }
+
+        function hidePass() {
+            pass.setAttribute('type', 'password')
+            eye.setAttribute('src', 'eyes/eye-open.svg')
+
+        }
     </script>
 </body>
 
