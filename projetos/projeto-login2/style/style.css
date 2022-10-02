@@ -25,14 +25,25 @@ html {
     background: white;
     border-radius: 10px;
     width: 400px;
-    margin: 10vh auto;
+    margin: auto;
     padding: 20px 30px;
     text-align: center;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.473);
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
 }
 
 .page-title {
-    animation: underline 2s infinite;
+    position: relative;
+    letter-spacing: -0.2rem;
+}
+
+.page-title span {
+    position: relative;
+    display: inline-block;
+    animation: flip 5s infinite;
+    animation-delay: calc(.2s * var(--i))
 }
 
 form {
@@ -160,24 +171,6 @@ i {
     transform: translate(-4px, -4px);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @keyframes underline {
     to {
         text-decoration: none;
@@ -185,5 +178,53 @@ i {
 
     from {
         text-decoration: underline;
+    }
+}
+
+@keyframes flip {
+
+    0%,
+    80% {
+        transform: rotateY(360deg)
+    }
+}
+
+
+@media screen and (max-width: 400px) {
+    .login-container {
+        height: 65vh;
+        width: 350px;
+    }
+}
+
+@media screen and (max-height: 680px) {
+    .login-container {
+        height: 85vh;
+        width: 350px;
+    }
+}
+
+@media screen and (max-height: 750px) {
+    .login-container {
+        height: 80vh;
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .login-container {
+        height: 90vh;
+        width: 250px;
+    }
+
+    input {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .login-container {
+        height: 65vh;
+        width: 300px;
     }
 }
