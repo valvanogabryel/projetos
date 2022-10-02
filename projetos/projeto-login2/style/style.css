@@ -111,6 +111,7 @@ input[type="submit"] {
     font-size: 1rem;
     position: relative;
     top: 30px;
+    width: 100%;
 }
 
 input[type="submit"]:hover {
@@ -118,11 +119,6 @@ input[type="submit"]:hover {
     transition: .3s;
     letter-spacing: 1.9px;
 }
-
-input[type="submit"]:focus {
-    width: 100%;
-}
-
 
 p {
     margin: 20px auto;
