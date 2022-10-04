@@ -192,28 +192,6 @@ p {
     }
 }
 
-
-@media screen and (max-width: 400px) {
-    .login-container {
-        height: 65vh;
-        width: 350px;
-    }
-}
-
-@media screen and (max-height: 680px) {
-    .login-container {
-        height: 85vh;
-        width: 350px;
-    }
-}
-
-@media screen and (max-height: 750px) {
-    .login-container {
-        height: 80vh;
-        width: 300px;
-    }
-}
-
 @media screen and (max-width: 300px) {
     .login-container {
         height: 90vh;
@@ -231,6 +209,35 @@ p {
         width: 300px;
     }
 }
+
+@media screen and (max-width: 400px) {
+    .login-container {
+        height: 65vh;
+        width: 350px;
+    }
+}
+
+@media screen and (max-height: 680px) {
+    .login-container {
+        height: 85vh;
+        width: 350px;
+    }
+}
+
+@media screen and (max-height: 750px) {
+
+    body,
+    html {
+        overflow-y: visible;
+    }
+
+    .login-container {
+        height: 80vh;
+        width: 300px;
+    }
+}
+
+
 
 
 
