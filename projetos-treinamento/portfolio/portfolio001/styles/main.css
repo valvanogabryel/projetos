@@ -26,6 +26,8 @@ body {
     width: 370px;
     border: 2px solid #e126d9;
     border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px #000000c6;
 }
 
 .card .my-informations {
@@ -61,13 +63,44 @@ body {
     padding: 10px 0;
     width: 50%;
     cursor: pointer;
+    transition: background-color .2s ease-in-out;
+}
+
+.tabs .tab:hover {
+    animation-play-state: paused;
 }
 
 .card .tabs img {
     width: 30px;
+    height: 30px;
 }
-
 
 .tabs .tab.selected {
     background: #262626;
+}
+
+.card .tab-informations {
+    background: #262626;
+}
+
+.card .tabs .tab:hover {
+    background: #414141;
+}
+
+.informations {
+    min-height: 260px;
+    padding: 15px;
+}
+
+.sub-title {
+    text-align: center;
+    font-size: 22px;
+    margin: 0 0 25px 0;
+}
+
+.description {
+    text-indent: 40px;
+    font-size: 20px;
+    max-height: 180px;
+    overflow-y: auto;
 }
