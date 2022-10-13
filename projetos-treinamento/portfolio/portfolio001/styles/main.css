@@ -153,8 +153,6 @@ span:hover {
     transform-origin: bottom left;
 }
 
-#social-gif {}
-
 .social-medias {
     display: flex;
     flex-direction: column;
