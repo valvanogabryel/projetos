@@ -1,5 +1,14 @@
 @charset "UTF-8";
 
+:root {
+    --cor1: #F22987;
+    --cor2: #F2059F;
+    --cor3: #EF4BF2;
+    --cor4: #2E038C;
+    --cor5: #150240;
+}
+
+
 body {
     background: #1A03CF url('..//img/imagens/SL.032321.41610.47.jpg') no-repeat center center fixed;
     background-size: cover;
@@ -17,17 +26,18 @@ body {
 #profile-pic {
     height: 96px;
     width: 96px;
-    border: 4px solid #02bbd0;
+    border: 4px solid #5B0947;
     border-radius: 50px;
 }
 
 .card {
     background: #070d12;
     width: 370px;
-    border: 2px solid #e126d9;
+    border: 2px solid var(--cor1);
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0px 0px 10px #000000c6;
+    box-shadow: 0px 0px 10px #000000d6;
+    cursor: default;
 }
 
 .card .my-informations {
@@ -66,8 +76,8 @@ body {
     transition: background-color .2s ease-in-out;
 }
 
-.tabs .tab:hover {
-    animation-play-state: paused;
+.tabs .tab:focus {
+    opacity: 0.2;
 }
 
 .card .tabs img {
@@ -90,6 +100,11 @@ body {
 .informations {
     min-height: 260px;
     padding: 15px;
+    display: none;
+}
+
+.informations.selected {
+    display: block;
 }
 
 .sub-title {
@@ -103,4 +118,86 @@ body {
     font-size: 20px;
     max-height: 180px;
     overflow-y: auto;
+}
+
+span {
+    color: var(--cor1);
+}
+
+span:hover {
+    color: var(--cor3);
+}
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    text-indent: 0px;
+    margin-right: 5px;
+}
+
+.hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: #f3f3f384;
+    transform-origin: bottom right;
+    transition: transform .25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+#social-gif {}
+
+.social-medias {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    max-height: 180px;
+    overflow-y: auto;
+}
+
+a {
+    display: block;
+    width: 250px;
+    color: #f3f3f3;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    transition: .2s ease-in-out;
+}
+
+a:hover {
+    opacity: .8;
+}
+
+#portfolio {
+    background: #06c185;
+}
+
+#portfolio:hover {
+    background: #02d08f;
+}
+
+#linkedin {
+    background: #1d87bd;
+}
+
+#linkedin:hover {
+    background: #229ddb;
+}
+
+#github {
+    background: #545454;
+}
+
+#github:hover {
+    background: #646464;
 }
