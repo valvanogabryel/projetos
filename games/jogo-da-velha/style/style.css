@@ -1,0 +1,16 @@
+/* Default Styles and Variables */
+:root {
+    --color1: #F22E52;
+    --color2: #8C2668;
+    --color3: #442273;
+    --color4: #2165BF;
+    --color5: #05C7F2;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
