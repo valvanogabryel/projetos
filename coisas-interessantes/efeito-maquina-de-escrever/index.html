@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efeito máquina de escrever</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: linear-gradient(to left, #372e2e, #1f0e0e);
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+        }
+
+        h1 {
+            max-width: 50%;
+            margin: 50px auto;
+            font-size: 4rem;
+            text-indent: 15px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Texto aleatório que será escrito dinâmicamente...</h1>
+
+
+
+
+    <script>
+        function typeWriter(element) {
+            const textArray = element.innerHTML.split('');
+            element.innerHTML = '';
+
+            textArray.forEach((letter, index) => {
+                setTimeout(() => {
+                    element.innerHTML += letter
+
+                }, 75 * index)
+
+            })
+
+        }
+
+
+        const title = document.querySelector('h1');
+        typeWriter(title)
+    </script>
+</body>
+
+</html>
