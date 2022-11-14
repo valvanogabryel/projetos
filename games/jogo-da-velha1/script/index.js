@@ -98,5 +98,3 @@ const handleClick = (element) => {
 start();
 
 restartButton.addEventListener('click', start);
-
-
