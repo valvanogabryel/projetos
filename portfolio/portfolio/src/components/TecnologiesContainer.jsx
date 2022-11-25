@@ -9,6 +9,7 @@ import {
     DiGit,
     DiGithubBadge
 } from 'react-icons/di';
+import ScrollReveal from 'scrollreveal';
 
 //Estilização
 import '../styles/components/technologiescontainer.sass';
@@ -23,6 +24,13 @@ const technologies = [
     { id: 'git', name: 'Git', icon: <DiGit />, text: 'Git é o sistema de controle de versão open source mais usado no mundo atualmente. Utilizado para controlar o histórico de alterações de arquivos e projetos em desenvolvimento.' },
     { id: 'github', name: 'GitHub', icon: <DiGithubBadge />, text: 'Uma plataforma de hospedagem de código-fonte e arquivos na nuvem.' },
 ];
+
+window.sr = ScrollReveal({ reset: true })
+
+sr.reveal(technologies[0].id, {
+    rotate: { x: 0, y: 80, z: 40 },
+    duration: 1500
+});
 
 const TechnologiesContent = () => {
     return <section className='tech-container'>

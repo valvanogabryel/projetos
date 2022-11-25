@@ -5,6 +5,7 @@
     flex-wrap: wrap
     gap: 3rem
     padding: 3rem
+    cursor: default
 
     h1
         margin-bottom: 4rem
@@ -13,3 +14,12 @@
         background: variables.$gradient
         -webkit-background-clip: text
         -webkit-text-fill-color: transparent
+        animation: o 1.1s
+        text-align: center
+
+@keyframes o
+    from
+        opacity: 0
+
+    to
+        opacity: 1

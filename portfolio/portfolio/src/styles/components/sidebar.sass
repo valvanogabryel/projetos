@@ -8,24 +8,28 @@
     flex-direction: column
     padding: 3rem 0
     text-align: center
-    position: relative
     background: variables.$bg-primary-color
     border-radius: variables.$container-border-radius
+    min-height: 70vh
     max-height: 75vh
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.62)
+    position: sticky
+    top: 125px
 
     img
         position: absolute
         top: -3rem
         border-radius: variables.$container-border-radius
         max-width: 70%
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2)
 
     .title
         background: variables.$bg-secondary-color
         border-radius: variables.$card-border-radius
-        margin-top: 12rem
+        margin-top: 13rem
         padding: .8rem 1.2rem
         color: variables.$text-secondary-color
+        cursor: default
 
     .btn
         @include mixins.btn
@@ -33,3 +37,10 @@
     :hover
         >.btn
             background: #fff
+
+    @media (max-width: 1070px)
+        position: relative
+        margin-bottom: 10rem
+
+    @media (max-width: 740px)
+        min-width: 80vw
