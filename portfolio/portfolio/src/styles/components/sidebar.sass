@@ -11,6 +11,8 @@
     position: relative
     background: variables.$bg-primary-color
     border-radius: variables.$container-border-radius
+    max-height: 75vh
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.62)
 
     img
         position: absolute
@@ -27,3 +29,7 @@
 
     .btn
         @include mixins.btn
+
+    :hover
+        >.btn
+            background: #fff

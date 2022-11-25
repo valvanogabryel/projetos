@@ -14,14 +14,14 @@ import {
 import '../styles/components/technologiescontainer.sass';
 
 const technologies = [
-    { id: 'html', name: 'HTML5', icon: <DiHtml5 /> },
-    { id: 'css', name: 'CSS3', icon: <DiCss3 /> },
-    { id: 'js', name: 'JavaScript', icon: <DiJsBadge /> },
-    { id: 'react', name: 'React', icon: <DiReact /> },
-    { id: 'sass', name: 'SASS', icon: <DiSass /> },
-    { id: 'bootstrap', name: 'Bootstrap', icon: <DiBootstrap /> },
-    { id: 'git', name: 'Git', icon: <DiGit /> },
-    { id: 'github', name: 'GitHub', icon: <DiGithubBadge /> },
+    { id: 'html', name: 'HTML5', icon: <DiHtml5 />, text: 'HyperText Markup Languague (Linguagem de Marcação de HiperTexto) é a ferramenta Front-End que dá estrutura ao site.' },
+    { id: 'css', name: 'CSS3', icon: <DiCss3 />, text: 'Cascading Style Sheets (Folha de Estilo em Cascata) é o mecanismo que dá estilo e beleza ao site.' },
+    { id: 'js', name: 'JavaScript', icon: <DiJsBadge />, text: 'Uma linguagem de programação que, juntamente com HTML e CSS, fornece ao usuário uma experiência mais agradável, com interações e animações dinâmicas.' },
+    { id: 'react', name: 'React', icon: <DiReact />, text: 'Uma biblioteca JavaScript de código aberto. Útil para criar interfaces de usuário (UI).' },
+    { id: 'sass', name: 'SASS', icon: <DiSass />, text: 'Uma linguagem de extensão das folhas de estilo. Serve para potencializar o CSS.' },
+    { id: 'bootstrap', name: 'Bootstrap', icon: <DiBootstrap />, text: 'Um framework web que facilita a criação de sites amigáveis e responsivos. Usa HTML, CSS e JavaScript. Útil para aumentar a velocidade de produção.' },
+    { id: 'git', name: 'Git', icon: <DiGit />, text: 'Git é o sistema de controle de versão open source mais usado no mundo atualmente. Utilizado para controlar o histórico de alterações de arquivos e projetos em desenvolvimento.' },
+    { id: 'github', name: 'GitHub', icon: <DiGithubBadge />, text: 'Uma plataforma de hospedagem de código-fonte e arquivos na nuvem.' },
 ];
 
 const TechnologiesContent = () => {
@@ -33,7 +33,7 @@ const TechnologiesContent = () => {
                     {tech.icon}
                     <div className="tech-info">
                         <h3>{tech.name}</h3>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto recusandae consectetur laboriosam harum in impedit exercitationem sunt, similique, eligendi quos quis iusto temporibus beatae molestiae quam possimus quod tempore placeat!</p>
+                        <p>{tech.text}</p>
                     </div>
                 </div>))}
         </div>
