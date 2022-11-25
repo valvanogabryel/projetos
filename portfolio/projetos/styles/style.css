@@ -1,7 +1,43 @@
 @charset "UTF-8";
 
+:root {
+    --body-bg-color: linear-gradient(-110deg, #142351 60%, #1E2D59 60%);
+    --font-stack: Arial, Helvetica, sans-serif;
+    --text-primary-color: #fff;
+    --text-secondary-color: #a6a6a6;
+    --bg-primary-color: #111;
+    --bg-secondary-color: #191919;
+    --container-border-radius: 10px;
+    --card-border-radius: 5px;
+    --gradient: linear-gradient(90deg, #3071F2 0%, #1E2D59 100%);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    background: var(--body-bg-color);
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.title {
+    color: var(--text-primary-color);
+    text-align: center;
+}
+
+#projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
 }
