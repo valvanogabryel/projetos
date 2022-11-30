@@ -1,4 +1,6 @@
 const errorMessage = document.querySelector('span#error-message');
+const customBtn = document.getElementById('custom');
+customBtn.addEventListener('click', btnTransform);
 
 const billInput = document.querySelector('input#bill');
 const peopleNumInput = document.querySelector('input#people-num');
@@ -83,14 +85,22 @@ function error() {
     peopleNumInput.classList.add('not-allowed');
 }
 
+function btnTransform() {
+    customBtn.type = 'number';
+    customBtn.placeholder = '0';
+    customBtn.addEventListener('input', customTest);
+};
 
+function customTest() {
+    let customValue = customBtn.value;
+    convertToDecimal(customValue);
+    return customValue;
+}
 
+const isNumberInput = () => {
+    return customBtn.type == 'number' ? 'cu' : 'cuzin';
+}
 
-// document.getElementById('custom').addEventListener('click', () => {
-//     custom.type = 'number';
-//     custom.placeholder = '0';
-
-//     window.onclick = custom => {
-//       if (custom.type == number) custom.type = 'button'
-//     }
-//   });
+if (isNumberInput) {
+    console.log(customValue)
+}
