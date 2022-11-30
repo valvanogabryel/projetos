@@ -1,4 +1,5 @@
 const errorMessage = document.querySelector('span#error-message');
+
 const billInput = document.querySelector('input#bill');
 const peopleNumInput = document.querySelector('input#people-num');
 billInput.addEventListener('input', billTransform);
@@ -10,6 +11,7 @@ tips.forEach(tipVal => {
 });
 
 const results = document.querySelectorAll('.results-price');
+
 const resetBtn = document.getElementById('reset-btn');
 resetBtn.addEventListener('click', reset);
 
@@ -21,7 +23,7 @@ const placeholderPrice = '$0.00';
 function billTransform() {
     billValue = parseFloat(billInput.value);
     calculateTip();
-};
+}
 
 function peopleNumInputTransform() {
     peopleNum = parseFloat(peopleNumInput.value);
