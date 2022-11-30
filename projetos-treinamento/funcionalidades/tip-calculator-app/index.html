@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="css/desktop.css">
+</head>
+
+<body>
+  <h1 class="title">S P L I T T E R</h1>
+  <main class="container">
+    <!-- Left side -->
+    <section class="informations">
+      <div class="bill-form">
+        <form>
+          <label for="bill">Bill</label>
+          <img src="images/icon-dollar.svg" alt="dollar">
+          <input type="number" name="bill" id="bill" placeholder="0">
+        </form>
+      </div>
+      <div>
+        <label for="percentage-options">Select Tip %</label>
+        <div class="percentage-options">
+          <div type="button" value="5%" class="tips tip-5">5%</div>
+          <div type="button" value="10%" class="tips tip-10">10%</div>
+          <div type="button" value="15%" class="tips tip-15 active">15%</div>
+          <div type="button" value="25%" class="tips tip-25">25%</div>
+          <div type="button" value="50%" class="tips tip-50">50%</div>
+          <div type="button" name="custom" id="custom" value="Custom" class="custom-btn" />
+        </div>
+      </div>
+      <div>
+        <form>
+          <label for="people-num">Number of People</label>
+          <img src="images/icon-person.svg" alt="dollar">
+          <span class="hide" id="error-message">
+            Can't be zero
+          </span>
+          <input type="number" name="people-num" id="people-num" placeholder="1" />
+        </form>
+      </div>
+    </section>
+
+    <!-- Right side -->
+    <section class="results">
+      <div class="results-per-person">
+        <div class="results-informations">
+          <h4>Tip Amount</h4>
+          <span class="subtext">/ person</span>
+          <span class="results-price">$0.00</span>
+        </div>
+        <div class="results-informations">
+          <h4>Total</h4>
+          <span class="subtext">/ person</span>
+          <span class="results-price">$0.00</span>
+        </div>
+      </div>
+      <button type="button" id="reset-btn">Reset</button>
+    </section>
+  </main>
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#" </a>valvanogabryel.</a>.
+    <!--link do github-->
+  </footer>
+
+  <script src="js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,274 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+:root {
+    --input-border-color: #26c0ab;
+    --results-color: #00494d;
+    --title-color: #5e7a7d;
+    --color4: #7f9c9f;
+    --background: #c5e4e7;
+    --color6: #f4fafa;
+    --container-color: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Space Mono', monospace;
+    background-color: var(--background);
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    color: #c75e5e;
+    display: inline;
+    float: right;
+    font-size: .8rem;
+    position: absolute;
+    bottom: 22%;
+    left: 33%;
+}
+
+.title {
+    margin: auto;
+    width: 5%;
+    font-size: 1.3rem;
+    color: var(--title-color);
+    position: relative;
+    bottom: 35%;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    padding: 25px 20px 25px 45px;
+    width: 50%;
+    margin: auto;
+    background: #fff;
+    min-height: 25rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 30px;
+    box-shadow: 0 0 10px #00000015;
+}
+
+.informations {
+    width: 50%;
+}
+
+.informations label {
+    color: var(--title-color);
+    display: block;
+    font-size: .9rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 33%;
+}
+
+.informations img {
+    position: absolute;
+    padding: .8rem;
+    padding-left: .8rem;
+    transform: scale(.8);
+}
+
+.informations input {
+    font-family: 'Space Mono', monospace;
+}
+
+.informations input::placeholder {
+    opacity: .6;
+}
+
+#bill,
+#people-num {
+    width: 85%;
+    max-height: 2.7rem;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--color6);
+    margin-bottom: 10px;
+}
+
+#bill:focus,
+#people-num:focus {
+    outline: 2px solid var(--input-border-color);
+}
+
+#people-num {
+    margin-bottom: 1.5rem;
+}
+
+label[for=people-num] {
+    margin-top: 2.3rem;
+}
+
+.not-allowed:focus {
+    outline: 2px solid #c75e5e !important;
+}
+
+.percentage-options {
+    width: 80%;
+    margin: 15px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 3px;
+}
+
+label[for=percentage-options] {
+    margin-top: 1.3rem;
+}
+
+.tips {
+    padding: .3rem 1.8rem;
+    font-size: 1.3rem;
+    color: #fff;
+    background-color: #00494d;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    max-width: 25rem;
+    text-align: center;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.tips:hover {
+    background: var(--input-border-color);
+    color: #00494d;
+}
+
+.tips.active {
+    background: #8ae8e9;
+    color: #00494d;
+}
+
+#custom {
+    background: transparent;
+    border: none;
+    border-radius: 5px;
+    font-weight: bolder;
+    font-size: 1.25rem;
+    cursor: pointer;
+    background-color: var(--color6);
+    max-width: 25rem;
+    max-height: 2.4rem;
+    margin: 6px 0 0 0;
+}
+
+.custom-btn {
+    color: #5e7a7d;
+}
+
+#custom:focus {
+    outline: 2px solid var(--input-border-color);
+}
+
+input[type=number] {
+    width: 90%;
+    text-align: end;
+    color: #00494d;
+    font-size: 1.3rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+}
+
+.results {
+    background-color: var(--results-color);
+    border-radius: 10px;
+    width: 50%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: .2rem 2rem;
+}
+
+.results-per-person {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 5%;
+}
+
+.results .results-per-person .results-informations {
+    position: relative;
+    top: 10%;
+}
+
+.results .results-per-person .results-informations:first-child {
+    margin-bottom: 1rem;
+}
+
+.results .results-per-person div h4 {
+    margin: 5px;
+    font-size: .9rem;
+    line-height: .3rem;
+}
+
+.results .results-per-person div h4:last-child {
+    margin-top: 50px;
+}
+
+.subtext {
+    color: #7f9c9f;
+    font-size: .8rem;
+}
+
+.results-price {
+    float: right;
+    font-size: 3rem;
+    color: #26c0ab;
+    position: relative;
+    bottom: 40%;
+}
+
+#reset-btn {
+    position: relative;
+    top: 10%;
+    font-family: 'Space Mono', monospace;
+    color: #00494d;
+    font-size: 1.1rem;
+    padding: .6rem;
+    margin: auto;
+    width: 95%;
+    text-transform: uppercase;
+    background-color: #26c0ab;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+#reset-btn:hover {
+    background-color: #1e887a;
+    color: #fff;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
