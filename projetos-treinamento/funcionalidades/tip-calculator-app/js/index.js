@@ -1,6 +1,6 @@
 const errorMessage = document.querySelector('span#error-message');
-const customBtn = document.getElementById('custom');
-customBtn.addEventListener('click', btnTransform);
+const customTip = document.getElementById('custom');
+customTip.addEventListener('click', btnTransform);
 
 const billInput = document.querySelector('input#bill');
 const peopleNumInput = document.querySelector('input#people-num');
@@ -47,6 +47,7 @@ function convertToDecimal(percentage) {
 }
 
 function calculateTip() {
+
     if (peopleNum >= 1) {
         tips.forEach(tipBtn => {
             tipBtn.addEventListener('click', calculateTip);
@@ -55,14 +56,22 @@ function calculateTip() {
         results[0].innerHTML = `$${tipResult}`;
         calculateTotal(tipResult);
 
-        //error stylish remove
+        //(error) stylish remove
         peopleNumInput.classList.remove('not-allowed');
         errorMessage.classList.add('hide');
         errorMessage.classList.remove('show');
     } else {
         error();
-    };
+    }
+
+    if (billValue >= 1000) {
+        billInput.value = 1000;
+    }
+    if (peopleNum >= 50) {
+        peopleNumInput.value = 50;
+    }
 }
+
 
 function calculateTotal(tipAmount) {
     let total = parseFloat(billValue / peopleNum + Number(tipAmount)).toFixed(2);
@@ -71,36 +80,33 @@ function calculateTotal(tipAmount) {
 
 function reset() {
     billInput.value = '';
-    peopleNumInput.value = '';
+    peopleNumInput.value = '1';
     billValue = 0.0;
     peopleNum = 1;
-    tipValue = 0.15;
     results[0].innerHTML = placeholderPrice;
     results[1].innerHTML = placeholderPrice;
 }
 
 function error() {
-    errorMessage.classList.remove('hide');
-    errorMessage.classList.add('show');
-    peopleNumInput.classList.add('not-allowed');
+    if (peopleNum < 1) {
+        errorMessage.classList.remove('hide');
+        errorMessage.classList.add('show');
+        peopleNumInput.classList.add('not-allowed');
+    }
 }
 
 function btnTransform() {
-    customBtn.type = 'number';
-    customBtn.placeholder = '0';
-    customBtn.addEventListener('input', customTest);
-};
-
-function customTest() {
-    let customValue = customBtn.value;
-    convertToDecimal(customValue);
-    return customValue;
+    customTip.type = 'number';
+    customTip.placeholder = '0';
+    customTip.addEventListener('input', getCustomValue);
 }
 
-const isNumberInput = () => {
-    return customBtn.type == 'number' ? 'cu' : 'cuzin';
+function getCustomValue() {
+    let customPercentage = customTip.value;
+    let customValue = convertToDecimal(customPercentage);
+    if (customTip.type == 'number') {
+        calculateTip(customValue)
+    }
 }
 
-if (isNumberInput) {
-    console.log(customValue)
-}
+
