@@ -17,7 +17,7 @@
     flex-direction: column;
     align-items: center;
     align-content: space-between;
-    max-width: 35%;
+    min-width: 10%;
 }
 
 .informations {
@@ -31,13 +31,13 @@
 
 #bill,
 #people-num {
-    min-width: 25vw;
+    min-width: 40vw;
     margin-bottom: 50px;
 }
 
 .percentage-options {
-    margin: 0;
     display: grid;
+    margin: auto;
     grid-template-columns: 100px 100px 100px;
     gap: 3px;
 }
