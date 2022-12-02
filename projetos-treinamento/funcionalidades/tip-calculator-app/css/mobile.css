@@ -27,14 +27,18 @@ body {
     display: none;
 }
 
+img {
+    display: none;
+}
+
 .show {
     color: #c75e5e;
     display: inline;
     float: right;
     font-size: .8rem;
     position: absolute;
-    bottom: 22%;
-    left: 33%;
+    bottom: 35%;
+    left: 57%;
     animation: shake .3s;
     cursor: default;
 }
@@ -75,7 +79,7 @@ input {
 }
 
 #bill {
-    background: url(../images/icon-dollar.svg);
+    background-image: url(../images/icon-dollar.svg);
     margin-bottom: 36px;
 }
 
@@ -112,6 +116,79 @@ input {
 }
 
 #people-num {
-    background: url('../images/icon-person.svg');
+    background-image: url('../images/icon-person.svg');
     margin-bottom: 2.4rem;
+}
+
+.results {
+    background: #00494d;
+    color: #fff;
+    padding: 39px 21px;
+    border-radius: 12px;
+}
+
+.results-informations h4 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.7rem;
+}
+
+.subtext {
+    font-size: 12px;
+    color: #7f9c9f;
+    font-weight: 700;
+}
+
+.results-price {
+    font-size: 28px;
+    color: #26c0ab;
+    font-weight: 700;
+}
+
+#reset-btn {
+    border: none;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    color: #00494d;
+    background: #26c0ab;
+    padding: 9px 0 9px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+#custom input {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+#bill label,
+#people-num label {
+    display: flex;
+    justify-content: space-between;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0)
+    }
+
+    25% {
+        transform: translateX(5px)
+    }
+
+    50% {
+        transform: translateX(-5px)
+    }
+
+    75% {
+        transform: translateX(5px)
+    }
+
+    100% {
+        transform: translateX(0)
+    }
 }
