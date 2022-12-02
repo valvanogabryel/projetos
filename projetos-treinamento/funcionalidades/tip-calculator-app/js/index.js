@@ -47,7 +47,6 @@ function convertToDecimal(percentage) {
 }
 
 function calculateTip() {
-
     if (peopleNum >= 1) {
         tips.forEach(tipBtn => {
             tipBtn.addEventListener('click', calculateTip);
@@ -72,15 +71,40 @@ function calculateTip() {
     }
 }
 
-
 function calculateTotal(tipAmount) {
     let total = parseFloat(billValue / peopleNum + Number(tipAmount)).toFixed(2);
     results[1].innerHTML = `$${total}`;
 }
 
+function btnTransform() {
+    tips.forEach(tipVal => {
+        tipVal.classList.remove('active');
+    });
+    customTip.type = 'number';
+
+    if (customTip.value == 0) {
+        resetCustomBtn();
+    } else {
+        customTip.addEventListener('input', getCustomValue);
+    }
+}
+
+function getCustomValue() {
+    let customPercentage = customTip.value;
+    let customValue = convertToDecimal(customPercentage);
+    if (customValue <= 80) {
+        tipValue = customValue;
+        calculateTip();
+    } else {
+        error();
+    }
+}
+
 function reset() {
     billInput.value = '';
     peopleNumInput.value = '1';
+    customTip.type = 'button';
+    customTip.value = 'Custom';
     billValue = 0.0;
     peopleNum = 1;
     results[0].innerHTML = placeholderPrice;
@@ -95,18 +119,8 @@ function error() {
     }
 }
 
-function btnTransform() {
-    customTip.type = 'number';
-    customTip.placeholder = '0';
-    customTip.addEventListener('input', getCustomValue);
+const resetCustomBtn = () => {
+    setTimeout(() => {
+        customTip.type = 'button';
+    }, 2000);
 }
-
-function getCustomValue() {
-    let customPercentage = customTip.value;
-    let customValue = convertToDecimal(customPercentage);
-    if (customTip.type == 'number') {
-        calculateTip(customValue)
-    }
-}
-
-
