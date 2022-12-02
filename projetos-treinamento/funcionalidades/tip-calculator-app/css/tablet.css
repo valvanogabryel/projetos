@@ -1,0 +1,48 @@
+@charset "UTF-8";
+@import url(default.css);
+
+.title {
+    right: 34%;
+    width: 10%;
+    font-size: 1.6rem;
+    top: 0rem;
+}
+
+.show {
+    left: 225px;
+    width: 100%;
+}
+
+.container {
+    flex-direction: column;
+    align-items: center;
+    align-content: space-between;
+    max-width: 35%;
+}
+
+.informations {
+    position: relative;
+    right: 25%;
+}
+
+.informations label {
+    min-width: 80%;
+}
+
+#bill,
+#people-num {
+    min-width: 25vw;
+    margin-bottom: 50px;
+}
+
+.percentage-options {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    gap: 3px;
+}
+
+.results {
+    width: 100%;
+    padding: 1.7rem;
+}

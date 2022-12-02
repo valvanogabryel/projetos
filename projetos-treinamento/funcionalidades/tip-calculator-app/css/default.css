@@ -43,6 +43,7 @@ body {
     cursor: default;
 }
 
+
 .title {
     margin: auto;
     width: 5%;
@@ -54,6 +55,7 @@ body {
 
 .container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     padding: 25px 20px 25px 45px;
     width: 50%;

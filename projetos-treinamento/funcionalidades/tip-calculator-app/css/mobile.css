@@ -1,7 +1,117 @@
 @charset "UTF-8";
 
-@media screen and (min-width:375px) {
-    body {
-        background: red;
-    }
+:root {
+    --input-border-color: #26c0ab;
+    --results-color: #00494d;
+    --title-color: #5e7a7d;
+    --color4: #7f9c9f;
+    --background: #c5e4e7;
+    --color6: #f4fafa;
+    --container-color: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Space Mono', monospace;
+    background-color: var(--background);
+    height: 100vh;
+    width: 100%;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    color: #c75e5e;
+    display: inline;
+    float: right;
+    font-size: .8rem;
+    position: absolute;
+    bottom: 22%;
+    left: 33%;
+    animation: shake .3s;
+    cursor: default;
+}
+
+.title {
+    text-align: center;
+    margin: 1.7rem auto 2.3rem auto;
+    width: 40%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 1.4rem 1.4rem 0 0;
+}
+
+
+label {
+    font-weight: 700;
+    color: #5e7a7d;
+    margin-bottom: 0.3rem;
+}
+
+input {
+    border: none;
+    outline: none;
+    padding: 5px 18px 5px 5px;
+    background-position: 17px 15px;
+    background-color: #f4fafa;
+    background-repeat: no-repeat;
+    text-align: right;
+    font-size: 24px;
+    color: #00494d;
+    font-weight: bolder;
+    font-family: "Space Mono", monospace;
+}
+
+#bill {
+    background: url(../images/icon-dollar.svg);
+    margin-bottom: 36px;
+}
+
+.percentage-options {
+    display: grid;
+    grid-template-columns: 144px 144px;
+    margin-top: .7rem;
+    row-gap: 2em;
+    column-gap: 18px;
+    margin-bottom: 2rem;
+}
+
+.tips {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    padding: .3rem 1.8rem;
+    font-size: 1.3rem;
+    color: #fff;
+    background-color: #00494d;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    max-width: 25rem;
+    text-align: center;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.tips.active {
+    background: #8ae8e9;
+    color: #00494d;
+}
+
+#people-num {
+    background: url('../images/icon-person.svg');
+    margin-bottom: 2.4rem;
 }
