@@ -1,0 +1,26 @@
+@use './_variables'
+
+@mixin container
+    max-width: variables.$container-width
+    margin: 0 auto
+    padding: 1.5rem 0
+
+@mixin content-center
+    display: flex
+    align-items: center
+    justify-content: center
+
+@mixin bg-image($img)
+    background: #000 url('../img/#{$img}') center center no-repeat
+    background-size: 100%
+    filter: grayscale(100%)
+    transition: .6s
+
+    &:hover
+        background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('../img/#{$img}')
+        background-size: 110%
+        filter: grayscale(0%)
+
+@mixin mobile
+    @media(max-width: 425px)
+        @content
