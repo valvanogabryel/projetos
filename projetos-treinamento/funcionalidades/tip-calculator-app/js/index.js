@@ -61,7 +61,7 @@ function calculateTip() {
         errorMessage.classList.remove('show');
     } else {
         error();
-    }
+    };
 
     if (billValue >= 1000) {
         billInput.value = 1000;
