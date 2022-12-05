@@ -1,15 +1,18 @@
 @charset "UTF-8";
 @import url(default.css);
 
-
-.title {
-    right: 34%;
-    width: 10%;
-    font-size: 1.6rem;
-    top: 0rem;
+.container {
+    min-width: 65%;
 }
 
-.show {
+.title {
+    width: 8%;
+    text-align: center;
+}
+
+
+
+/* .show {
     left: 225px;
     width: 100%;
 }
@@ -46,4 +49,4 @@
 .results {
     width: 100%;
     padding: 1.7rem;
-}
+}  */

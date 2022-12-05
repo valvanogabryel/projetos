@@ -40,6 +40,9 @@
     margin: auto;
     grid-template-columns: 100px 100px 100px;
     gap: 3px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
 }
 
 .results {

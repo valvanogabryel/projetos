@@ -5,15 +5,24 @@ body {
     overflow: visible;
 }
 
+.title {
+    position: absolute;
+    top: 5%;
+    left: 36%;
+    width: 30%;
+}
+
 .container {
     display: flex;
     flex-direction: column;
     width: 100%;
     min-height: 50vh;
-    max-height: 92vh;
+    height: 100vh;
     padding-bottom: 12rem;
     flex-wrap: nowrap;
     justify-content: space-between;
+    position: relative;
+    margin-top: 10vh;
 }
 
 .informations label {
@@ -22,7 +31,10 @@ body {
 
 .percentage-options {
     grid-template-columns: 130px 130px;
-    margin: auto 15%;
+    margin: -5px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
 }
 
 #bill,
@@ -33,6 +45,8 @@ body {
 .results {
     width: 100%;
     padding: 2.5rem 1.2rem;
+    position: relative;
+    right: 3%;
 }
 
 .results-price {
