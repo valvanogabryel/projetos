@@ -32,6 +32,103 @@ body
         font-size: 3rem
 
     &-navbar // .header-navbar
+        #btn-mobile
+            display: none
+            color: white
+            background: #2d2d2d
+            letter-spacing: 2px
+            margin-right: .6rem
+
+            @include mixins.mobile
+                display: flex
+                margin-left: 1rem
+                padding: 0.5rem 1rem
+                font-size: 1rem
+                border: none
+                cursor: pointer
+                position: relative
+                top: .5rem
+                left: 3rem
+
+                #menu
+                    display: block
+                    position: absolute
+                    width: 100%
+                    top: 70px
+                    right: 0
+                    background: #e7e7e7
+                    z-index: 10000
+                    height: 0
+                    transition: 0.6s ease
+                    opacity: 0
+                    overflow-y: hidden
+
+                #hamburguer
+                    display: block
+                    width: 20px
+                    border-top: 2px solid
+                    gap: .5rem
+
+                    &::before
+                        content: ''
+                        display: block
+                        width: 20px
+                        height: 2px
+                        background: currentColor
+                        margin-top: 5px
+                        transition: .3s ease
+
+                    &::after
+                        content: ''
+                        display: block
+                        width: 20px
+                        height: 2px
+                        background: currentColor
+                        margin-top: 5px
+                        transition: .3s ease
+        &.active
+            #hamburguer
+                border-top-color: transparent
+                transition: .1s ease
+
+                &::before
+                    transform: rotate(135deg)
+
+                &::after
+                    transform: rotate(-135deg)
+                    position: relative
+                    top: -7px
+
+            @include mixins.mobile
+                &.active
+                    #menu
+                        height: calc(100vh - 70px)
+                        opacity: 100
+                        overflow-y: auto
+                        width: 100%
+
+                    ul
+                        display: flex
+                        flex-direction: column
+                        background: #2d2d2d
+                        justify-content: space-between
+                        position: absolute
+                        top: 8%
+                        right: 0%
+                        z-index: 2
+                        border-bottom: 3px solid #545454
+                        box-shadow: 0 0 10px black
+                        overflow: hidden
+
+                        li
+                            font-size: 1.3rem
+                            text-align: center
+                            padding-top: 4.5rem
+                            height: 100%
+                            width: 100%
+                            transition: .3s
+                            &:hover
+                                background: #393939
 
         ul
             height: 100%

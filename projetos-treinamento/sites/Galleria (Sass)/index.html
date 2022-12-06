@@ -23,7 +23,12 @@
     <header class="header">
         <a href="#" class="header-brand">Galleria</a>
         <nav class="header-navbar">
-            <ul>
+            <button aria-label="Abrir menu" aria-controls="menu" aria-haspopup="true" aria-expanded="false"
+                id="btn-mobile">
+                Menu
+                <span id="hamburguer"></span>
+            </button>
+            <ul id="menu" role="menu">
                 <li>
                     <a href="#" class="active">Home</a>
                 </li>
@@ -111,6 +116,8 @@
     <footer>
         <p><span>Galleria</span> &copy; 2022</p>
     </footer>
+
+    <script src="js/script.js"></script>
 </body>
 
 </html>

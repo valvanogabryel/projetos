@@ -34,6 +34,107 @@ body ul {
   color: #FFF;
   font-size: 3rem;
 }
+.header-navbar #btn-mobile {
+  display: none;
+  color: white;
+  background: #2d2d2d;
+  letter-spacing: 2px;
+  margin-right: 0.6rem;
+}
+@media (max-width: 425px) {
+  .header-navbar #btn-mobile {
+    display: flex;
+    margin-left: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    top: 0.5rem;
+    left: 3rem;
+  }
+  .header-navbar #btn-mobile #menu {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 70px;
+    right: 0;
+    background: #e7e7e7;
+    z-index: 10000;
+    height: 0;
+    transition: 0.6s ease;
+    opacity: 0;
+    overflow-y: hidden;
+  }
+  .header-navbar #btn-mobile #hamburguer {
+    display: block;
+    width: 20px;
+    border-top: 2px solid;
+    gap: 0.5rem;
+  }
+  .header-navbar #btn-mobile #hamburguer::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: currentColor;
+    margin-top: 5px;
+    transition: 0.3s ease;
+  }
+  .header-navbar #btn-mobile #hamburguer::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: currentColor;
+    margin-top: 5px;
+    transition: 0.3s ease;
+  }
+}
+.header-navbar.active #hamburguer {
+  border-top-color: transparent;
+  transition: 0.1s ease;
+}
+.header-navbar.active #hamburguer::before {
+  transform: rotate(135deg);
+}
+.header-navbar.active #hamburguer::after {
+  transform: rotate(-135deg);
+  position: relative;
+  top: -7px;
+}
+@media (max-width: 425px) {
+  .header-navbar.active.active #menu {
+    height: calc(100vh - 70px);
+    opacity: 100;
+    overflow-y: auto;
+    width: 100%;
+  }
+  .header-navbar.active.active ul {
+    display: flex;
+    flex-direction: column;
+    background: #2d2d2d;
+    justify-content: space-between;
+    position: absolute;
+    top: 8%;
+    right: 0%;
+    z-index: 2;
+    border-bottom: 3px solid #545454;
+    box-shadow: 0 0 10px black;
+    overflow: hidden;
+  }
+  .header-navbar.active.active ul li {
+    font-size: 1.3rem;
+    text-align: center;
+    padding-top: 4.5rem;
+    height: 100%;
+    width: 100%;
+    transition: 0.3s;
+  }
+  .header-navbar.active.active ul li:hover {
+    background: #393939;
+  }
+}
 .header-navbar ul {
   height: 100%;
   display: flex;
