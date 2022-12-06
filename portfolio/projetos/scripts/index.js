@@ -7,3 +7,15 @@ for (let i = 0; i < divisions.length + 1; i++) {
         duration: 500
     });
 };
+
+const images = document.querySelectorAll('img');
+images.forEach(img => {
+    img.addEventListener('mouseover', (event) => {
+
+        document.querySelector('.btn').display = 'block'
+
+
+
+    })
+})
+
