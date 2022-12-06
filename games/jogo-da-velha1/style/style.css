@@ -146,3 +146,13 @@ body {
 .show-winning-message {
     display: flex;
 }
+
+@media screen and (max-width: 600px) {
+    body {
+        overflow: hidden;
+    }
+
+    .show-winning-message{
+        text-align: center;
+    }
+}
