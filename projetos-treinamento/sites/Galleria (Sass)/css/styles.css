@@ -25,7 +25,7 @@ body ul {
   margin: 0 auto;
   padding: 1.5rem 0;
 }
-@media (max-width: 425px) {
+@media (max-width: 725px) {
   .header {
     padding: 1.1rem;
   }
@@ -41,7 +41,7 @@ body ul {
   letter-spacing: 2px;
   margin-right: 0.6rem;
 }
-@media (max-width: 425px) {
+@media (max-width: 725px) {
   .header-navbar #btn-mobile {
     display: flex;
     margin-left: 1rem;
@@ -103,7 +103,7 @@ body ul {
   position: relative;
   top: -7px;
 }
-@media (max-width: 425px) {
+@media (max-width: 725px) {
   .header-navbar.active.active #menu {
     height: calc(100vh - 70px);
     opacity: 100;
@@ -141,7 +141,7 @@ body ul {
   align-items: center;
   justify-content: center;
 }
-@media (max-width: 425px) {
+@media (max-width: 725px) {
   .header-navbar ul {
     display: none;
   }
@@ -163,7 +163,7 @@ body ul {
   justify-content: center;
   height: 100%;
 }
-@media (max-width: 425px) {
+@media (max-width: 725px) {
   .header-social-medias ul {
     display: none;
   }
@@ -186,7 +186,7 @@ body ul {
   justify-content: space-between;
   padding: 0;
 }
-@media (max-width: 425px) {
+@media (max-width: 725px) {
   .gallery {
     flex-direction: column;
   }
@@ -201,7 +201,7 @@ body ul {
   flex-direction: column;
   color: #FFF;
 }
-@media (max-width: 425px) {
+@media (max-width: 725px) {
   .gallery-card {
     width: 90%;
     margin-bottom: 6%;
