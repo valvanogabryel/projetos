@@ -1,10 +1,7 @@
-import { useState } from 'react'
-import './App.css'
+import './styles/global.css'
 import { Habit } from './components/habit'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <div className="App">
       <h1>hello, world</h1>
@@ -22,3 +19,8 @@ function App() {
 }
 
 export default App
+
+/*
+  Componente: Reaproveitar / Isolar
+  Propriedade: Informação enviada para modificar um componente visual ou compormentalmente
+*/
