@@ -20,7 +20,7 @@ Navegador somente suporta o Get.'
 */
 
 app.get('/hello', async () => {
-    const habits = await prisma.Habit.findMany({
+    const habits = await prisma.habit.findMany({
         where: {
             title: {
                 startsWith: 'correr'
