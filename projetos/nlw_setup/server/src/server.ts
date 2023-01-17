@@ -1,6 +1,11 @@
 import fastify from "fastify";
+import cors from "@fastify/cors";
+import { PrismaClient } from "@prisma/client";
 
 const app = fastify();
+const prisma = new PrismaClient();
+
+app.register(cors);
 
 /*
 Método HTTP: { 
@@ -14,8 +19,15 @@ Método HTTP: {
 Navegador somente suporta o Get.'
 */
 
-app.get('/hello"', () => {
-    return 'Hello, World!'
+app.get('/hello', async () => {
+    const habits = await prisma.Habit.findMany({
+        where: {
+            title: {
+                startsWith: 'correr'
+            }
+        }
+    })
+    return habits;
 })
 
 
