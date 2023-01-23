@@ -110,6 +110,7 @@ function App() {
       team: teams[2].name
     },
     {
+      id: uuidv4(),
       name: 'DANIEL ARTINE',
       role: 'Engenheiro de Software na Stone Age',
       image: 'https://www.alura.com.br/assets/img/lideres/daniel-artine.1647533644.jpeg',
