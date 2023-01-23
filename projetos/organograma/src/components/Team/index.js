@@ -25,6 +25,7 @@ const Team = ({ name, primary_color, collaborators, onDelete, changeColor, id, o
                             key={index}
                             onDelete={onDelete}
                             id={collaborator.id}
+                            isFavorite={collaborator.isFavorite}
                             onFavorite={onFavorite}
                         />
                     })}

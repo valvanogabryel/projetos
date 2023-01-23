@@ -6,13 +6,14 @@ import { AiFillHeart, AiOutlineHeart } from 'react-icons/ai';
 const Collaborator = ({ name, role, image, primary_color, onDelete, id, isFavorite, onFavorite }) => {
     const cardColor = primary_color;
 
-    const propsDefault = {
-        size: 25,
-        onClick: favorite
-    }
-
     function favorite() {
         onFavorite(id);
+    }
+
+    const propsDefault = {
+        size: 25,
+        cursor: 'pointer',
+        onClick: favorite
     }
 
     return (
@@ -26,7 +27,7 @@ const Collaborator = ({ name, role, image, primary_color, onDelete, id, isFavori
                 <h5>{role}</h5>
                 <div className="favorite">
                     {isFavorite ? <AiFillHeart color='red' {...propsDefault} />
-                        : <AiOutlineHeart color={primary_color} {...propsDefault} />}
+                        : <AiOutlineHeart color={cardColor} {...propsDefault} />}
                 </div>
             </div>
         </div>

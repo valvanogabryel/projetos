@@ -22,6 +22,8 @@ const Form = (props) => {
         setRole('');
         setImage('');
         setTeam('Programação');
+        setTeamName('');
+        setTeamColor('');
     }
 
     const [name, setName] = useState('');
@@ -68,7 +70,8 @@ const Form = (props) => {
             </form>
             <form onSubmit={(event) => {
                 event.preventDefault();
-                props.createTeam({ name: teamName, color: teamColor })
+                props.createTeam({ name: teamName, color: teamColor });
+                clearForm();
             }} className="form">
                 <h2 className="form__title">Preencha os dados para criar um novo time.</h2>
                 <Field

@@ -10,7 +10,6 @@ function App() {
   const [teams, setTeams] = useState([
     {
       id: uuidv4(),
-      isFavorite: false,
       name: 'Programação',
       color: '#57C278',
     },
@@ -270,7 +269,7 @@ function App() {
     setCollaborators(collaborators.map(collaborator => {
       if (collaborator.id === id) collaborator.isFavorite = !collaborator.isFavorite;
       return collaborator;
-    }));
+    }))
   }
 
   return (
