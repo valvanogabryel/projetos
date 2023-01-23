@@ -267,7 +267,10 @@ function App() {
   }
 
   function handleFavorite(id) {
-
+    setCollaborators(collaborators.map(collaborator => {
+      if (collaborator.id === id) collaborator.isFavorite = !collaborator.isFavorite;
+      return collaborator;
+    }));
   }
 
   return (
