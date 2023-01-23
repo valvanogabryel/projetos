@@ -2,7 +2,7 @@ import hexToRgba from 'hex-to-rgba';
 import Collaborator from '../Collaborator';
 import './Team.css';
 
-const Team = ({ name, primary_color, collaborators, onDelete, changeColor, id }) => {
+const Team = ({ name, primary_color, collaborators, onDelete, changeColor, id, onFavorite }) => {
     const sectionBackground = { backgroundColor: hexToRgba(primary_color, '.3') }
 
     return (
@@ -25,6 +25,7 @@ const Team = ({ name, primary_color, collaborators, onDelete, changeColor, id })
                             key={index}
                             onDelete={onDelete}
                             id={collaborator.id}
+                            onFavorite={onFavorite}
                         />
                     })}
                 </div>

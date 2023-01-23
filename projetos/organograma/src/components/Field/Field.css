@@ -25,3 +25,9 @@
     color: #a4a4a4;
     font-size: 1rem;
 }
+
+.field__input[type="color"] {
+    width: 5rem;
+    padding: 15px;
+    height: 4rem;
+}
