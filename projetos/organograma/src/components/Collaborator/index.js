@@ -1,4 +1,5 @@
 import './Collaborator.css';
+import 'animate.css';
 import { AiFillHeart, AiOutlineHeart } from 'react-icons/ai';
 
 
@@ -16,8 +17,8 @@ const Collaborator = ({ name, role, image, primary_color, onDelete, id, isFavori
         onClick: favorite
     }
 
-    return (
-        <div className="card__container">
+    return (//                          
+        <div className="card__container ">
             <span className='delete' onClick={() => onDelete(id)}>X</span>
             <div className="card__picture" style={{ backgroundColor: cardColor }}>
                 <img src={image} alt="Foto de perfil do colaborador" />
@@ -26,7 +27,7 @@ const Collaborator = ({ name, role, image, primary_color, onDelete, id, isFavori
                 <h4>{name.toUpperCase()}</h4>
                 <h5>{role}</h5>
                 <div className="favorite">
-                    {isFavorite ? <AiFillHeart color='red' {...propsDefault} />
+                    {isFavorite ? <AiFillHeart className='animate__animated animate__heartBeat' color='red' {...propsDefault} />
                         : <AiOutlineHeart color={cardColor} {...propsDefault} />}
                 </div>
             </div>
